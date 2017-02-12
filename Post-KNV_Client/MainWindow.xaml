@@ -1,0 +1,36 @@
+﻿<Window x:Class="Post_KNV_Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ClientWindow" Height="641.2" Width="840.63" ResizeMode="CanMinimize" Background="{StaticResource LofipGreenLight}">
+    <Grid >
+        <TextBox x:Name="_Console" HorizontalAlignment="Left" Height="311" Margin="10,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="498" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Style="{StaticResource NormalTextBoxStyle}"/>
+        <Image x:Name="_ColorPicture" HorizontalAlignment="Left" Height="270" Margin="10,10,0,0" VerticalAlignment="Top" Width="480" Stretch="UniformToFill" />
+        <Image x:Name="_DepthPicture" HorizontalAlignment="Left" Height="270" Margin="495,10,0,0" VerticalAlignment="Top" Width="326" Stretch="UniformToFill"/>
+        <Grid HorizontalAlignment="Left" Height="311" Margin="513,283,0,0" VerticalAlignment="Top" Width="308" Background="{StaticResource LofipWhite}">
+            <Button x:Name="_Button_Settings" Content="Settings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="129" Click="_Button_Settings_Click" Style="{StaticResource ButtonStyleOnWhite}" Height="38"/>
+            <Grid Margin="10,84,0,0" HorizontalAlignment="Left" Width="205" Height="122" VerticalAlignment="Top">
+                <TextBlock Text="Connection Status:" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource HeadlineFontOnWhite}"/>
+                <TextBlock Text="Current ID:" HorizontalAlignment="Left" Margin="0,49,0,0" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock Text="Current IP:" HorizontalAlignment="Left" Margin="0,68,0,0" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock Text="Server IP:" HorizontalAlignment="Left" Margin="0,88,0,-0.2" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_CurrentID" HorizontalAlignment="Left" Margin="72,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_CurrentIP" HorizontalAlignment="Left" Margin="72,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_ServerIP" HorizontalAlignment="Left" Margin="72,88,0,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock Text="Status:" HorizontalAlignment="Left" Margin="0,29,0,0" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_ConnectionStatus" HorizontalAlignment="Left" Margin="72,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <Image x:Name="_StatusBlockConnection" HorizontalAlignment="Left" Height="20" Margin="185,0,0,0" VerticalAlignment="Top" Width="20" Source="pack://siteoforigin:,,,/Resources/impressions_general_help_256.png"/>
+                <TextBlock Text="Gateway IP:" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_GatewayIP" HorizontalAlignment="Left" Margin="72,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+            </Grid>
+            <Grid Margin="10,211,0,0" HorizontalAlignment="Left" Width="157" Height="64" VerticalAlignment="Top">
+                <TextBlock Text="Kinect Status:" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource HeadlineFontOnWhite}"/>
+                <TextBlock Text="Status:" HorizontalAlignment="Left" Margin="0,29,0,0" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_KinectStatus" HorizontalAlignment="Left" Margin="72,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock Text="FPS:" HorizontalAlignment="Left" Margin="0,49,0,-0.2" VerticalAlignment="Top" Style="{StaticResource NormalFontOnWhite}"/>
+                <TextBlock x:Name="_Txtblock_KinectFPS" HorizontalAlignment="Left" Margin="72,49,0,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Text="{}{default value}" Style="{StaticResource NormalFontOnWhite}"/>
+                <Image x:Name="_StatusBlockKinect" HorizontalAlignment="Left" Height="20" Margin="137,0,0,0" VerticalAlignment="Top" Width="20" Source="Resources\impressions_general_help_256.png"/>
+            </Grid>
+        </Grid>
+        <CheckBox x:Name="_CheckboxCalculateColor" Content="Calculate Color" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="_CheckboxCalculatePictures_Checked" Unchecked="_CheckboxCalculatePictures_Checked"/>
+    </Grid>
+</Window>
